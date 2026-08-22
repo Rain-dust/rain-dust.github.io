@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>好用的skill</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script type="importmap">
+{
+  "imports": {
+    "d3-force": "https://cdn.jsdelivr.net/npm/d3-force@3.0.0/+esm",
+    "d3-selection": "https://cdn.jsdelivr.net/npm/d3-selection@3.0.0/+esm",
+    "d3-zoom": "https://cdn.jsdelivr.net/npm/d3-zoom@3.0.0/+esm",
+    "d3-drag": "https://cdn.jsdelivr.net/npm/d3-drag@3.0.0/+esm"
+  }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/pixi.js@7.4.2/dist/pixi.min.js"></script>
+<script async type="module">import mermaid from"https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";mermaid.initialize({startOnLoad:!0})</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha512-hpZ5pDCF2bRCweL5WoA0/N1elet1KYL5mx3LP555Eg/0ZguaHawxNvEjF6O3rufAChs16HVNhEc6blF/rZoowQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-sv0slik/5O0JIPdLBCR2A3XDg/1U3WuDEheZfI/DI5n8Yqc3h5kjrnr46FGBNiUAJF7rE4LHKwQ/SoSLRKAxEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>window.addEventListener("load",(()=>{document.querySelectorAll(".callout").forEach((e=>{const t=getComputedStyle(e).getPropertyValue("--callout-icon"),l=t&&t.trim().replace(/^lucide-/,"");if(l){const t=e.querySelector(".callout-title");if(t){const e=document.createElement("div"),c=document.createElement("i");e.appendChild(c),c.setAttribute("data-lucide",l),e.setAttribute("class","callout-icon"),t.insertBefore(e,t.firstChild)}}})),lucide.createIcons(),Array.from(document.querySelectorAll(".callout.is-collapsible")).forEach((e=>{e.querySelector(".callout-title").addEventListener("click",(t=>{e.classList.contains("is-collapsed")?e.classList.remove("is-collapsed"):e.classList.add("is-collapsed")}))}))}))</script>
+<script defer="defer" src="https://fastly.jsdelivr.net/npm/@alpinejs/persist@3.11.1/dist/cdn.min.js"></script>
+<script defer="defer" src="https://fastly.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" async>
+<script src="https://fastly.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+<link href="/styles/obsidian-base.css" rel="stylesheet">
+<link href="/styles/_theme.d92311c2.css" rel="stylesheet">
+<link href="/styles/digital-garden-base.css" rel="stylesheet">
+<link href="/styles/custom-style.css" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style></style>
+</head>
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" style="text-decoration:none">
+<h1 style="margin:15px!important">Digital Garden</h1>
+</a>
+</div>
+</nav>
+<header>
+<div class="header-meta">
+</div>
+</header>
+<p>涵盖全网和社媒搜索、社媒读取下载和归档、私人收藏链接导出和音视频ASR转写。</p>
+<p>四个核心Skill：<br>
+⓵ yichen-unified-search：Codex的眼镜——全网+社媒搜索，适合深度思考问题、查找实时信息、搜寻开源工具......</p>
+<ol>
+<li>全网网页、新闻、官网：AnySearch 公共搜索。</li>
+<li>法律、金融、学术、安全等垂直领域：AnySearch 垂直搜索。</li>
+<li>GitHub：gh search 搜索仓库、代码、Issue 和 PR。</li>
+<li>微信公众号：OpenCLI，通过搜狗微信进行匿名公开搜索。</li>
+<li>小红书：OpenCLI，读取Chrome登录态进行站内搜索，需要当轮授权。</li>
+<li>抖音：OpenCLI，读取Chrome登录态进行低频站内搜索，需要当轮授权。</li>
+<li>今日头条：OpenCLI，使用专用匿名环境搜索文章和图文内容。</li>
+<li>X/Twitter：Grok OAuth＋grok-consult，执行X平台公开内容搜索。</li>
+<li>B站：bili search，匿名搜索公开视频和相关信息。</li>
+<li>YouTube：yt-dlp ytsearch，匿名搜索公开视频，只提取信息和链接。</li>
+<li>小宇宙：AnySearch，通过 site:<a href="https://t.co/KADcC1lXLl" target="_blank" class="external-link">http://xiaoyuzhoufm.com</a> 搜索公开内容。</li>
+<li>其他指定网站：AnySearch，通过 site:目标域名 搜索已被公开收录的页面。</li>
+<li>多关键词批量搜索：AnySearch batch_search，并行搜索多组关键词。<br>
+14.未指定平台的社交媒体讨论：AnySearch 的社交媒体垂直搜索，先发现公开候选。</li>
+</ol>
+<p>⓶yichen-content-archive：读取用户直接提供的网页、小红书、抖音、公众号、YouTube、B站和小宇宙链接，并且下载归档。</p>
+<ol>
+<li>普通网页：用 Jina Reader 或 Web Reader 提取正文并转换成Markdown。</li>
+<li>小红书：解析网页中的 INITIAL_STATE 获取正文、图片和视频直链，必要时经授权使用登录态。</li>
+<li>抖音：用 Playwright监听视频详情接口，提取元数据和无水印视频地址。</li>
+<li>微信公众号：通过公开文章解析接口读取单篇正文，批量文章使用本地公众号归档工具。</li>
+<li>YouTube：用 yt-dlp 读取视频信息，下载视频、音频、字幕或枚举播放列表。</li>
+<li>B站：用 bili-cli 读取视频信息，用 yt-dlp 下载视频或枚举合集。</li>
+<li>小宇宙：匿名解析单集页面中的音频地址并下载，播客清单需要OpenCLI授权枚举。</li>
+</ol>
+<p>⓷yichen-bookmarks-export：只读导出小红书、抖音、X 的私人收藏链接。</p>
+<li>X：使用本机 Field Theory CLI，读取 Chrome 登录态并调用 X 内部 GraphQL Bookmarks 接口，同步到本地索引后由 Python 脚本导出链接。</li>
+<li>小红书：复用已登录的 Chrome 会话，进入收藏页后自动滚动，通过页面 DOM 提取笔记链接并去重，保留 xsec_token，不导出 Cookie。</li>
+抖音：复用已登录的 Chrome 会话，滚动收藏列表并解析页面中的 /video/<id> 和 /note/</id> 链接。
+<p>⓸yichen-asr：用 Step ASR 或豆包 ASR 转写已有音视频。两者效果差距不大，豆包略微好一点点。</p>
+<ol>
+<li>阶跃星辰Step ASR大概一个小时一毛五：<a href="https://t.co/HQWPQUq0G4" target="_blank" class="external-link">http://stepfun.com</a> 2.火山引擎豆包ASR大概一个小时一块钱：<a href="https://t.co/OYYbb4HiTy" target="_blank" class="external-link">http://volcengine.com</a></li>
+</ol>
+<p>yichen-web-research Skill相当于一个入口，如果没有特殊指定，你的所有上述相关的操作会自动分配对应的Skill，如果能记住单独Skill的名字，也可以单独调用。</p>
+<script>window.location.hash&&document.getElementById(window.location.hash.slice(1)).classList.add("referred"),window.addEventListener("hashchange",(e=>{const t=e.oldURL.split("#");t[1]&&document.getElementById(t[1]).classList.remove("referred");const n=e.newURL.split("#");n[1]&&document.getElementById(n[1]).classList.add("referred")}),!1);const url_parts=window.location.href.split("#"),url=url_parts[0],referrence=url_parts[1];document.querySelectorAll(".cm-s-obsidian > *[id]").forEach((function(e){e.ondblclick=function(e){const t=url+"#"+e.target.id;navigator.clipboard.writeText(t)}}))</script>
+<script src="https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
+<script defer="defer">TIMESTAMP_FORMAT="MMM dd, yyyy h:mm a",DATE_FORMAT="MMM dd, yyyy",document.querySelectorAll(".human-date").forEach((function(e){try{date=e.getAttribute("data-date")||e.innerText,format=/^\d{4}-\d{2}-\d{2}$/.test(date.trim())?DATE_FORMAT:TIMESTAMP_FORMAT,parsed_date=luxon.DateTime.fromISO(date),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromSQL(date)),null!=parsed_date.invalid&&(parsed_date=luxon.DateTime.fromHTTP(date)),null==parsed_date.invalid&&(e.innerHTML=parsed_date.toFormat(format))}catch(e){}}))</script>
+<script defer="defer" src="https://unpkg.com/lucide@latest"></script>
+<script defer="defer">document.addEventListener("DOMContentLoaded",(()=>{lucide.createIcons({attrs:{class:["svg-icon"]}})}))</script>
+<script>document.addEventListener("DOMContentLoaded",(function(){document.querySelectorAll(".obsidian-bases-views").forEach((function(e){var t=e.querySelector(".obsidian-bases-active-view"),a=e.querySelector(".obsidian-bases-dropdown"),i=e.querySelectorAll(".obsidian-bases-dropdown-item"),n=e.querySelectorAll(".obsidian-bases-view-panel"),o=e.querySelector(".obsidian-bases-active-view-name"),r=e.querySelector(".obsidian-bases-count-value");t&&a&&(t.addEventListener("click",(function(e){e.stopPropagation();var i="none"!==a.style.display;a.style.display=i?"none":"block",t.setAttribute("aria-expanded",!i)})),document.addEventListener("click",(function(){a.style.display="none",t.setAttribute("aria-expanded","false")})),i.forEach((function(s){s.addEventListener("click",(function(s){s.stopPropagation();var d=this.getAttribute("data-view-index");i.forEach((function(e){e.classList.remove("active")})),this.classList.add("active"),n.forEach((function(e){e.style.display="none"}));var l=e.querySelector('.obsidian-bases-view-panel[data-view-index="'+d+'"]');l&&(l.style.display="block");var c=this.querySelector(".obsidian-bases-view-icon"),u=t.querySelector(".obsidian-bases-view-icon");if(c&&u&&u.replaceWith(c.cloneNode(!0)),o&&(o.textContent=this.textContent.trim()),r&&l){var b=l.querySelectorAll("tbody tr:not(.obsidian-base-group-row), .obsidian-base-card, .obsidian-base-list li");r.textContent=b.length}a.style.display="none",t.setAttribute("aria-expanded","false")}))})))})),document.querySelectorAll(".bases-dynamic-date").forEach((function(e){var t=e.getAttribute("data-type"),a=new Date;if("today"===t){var i=a.getFullYear(),n=String(a.getMonth()+1).padStart(2,"0"),o=String(a.getDate()).padStart(2,"0");e.textContent=i+"-"+n+"-"+o}else if("now"===t){i=a.getFullYear(),n=String(a.getMonth()+1).padStart(2,"0"),o=String(a.getDate()).padStart(2,"0");var r=String(a.getHours()).padStart(2,"0"),s=String(a.getMinutes()).padStart(2,"0");e.textContent=i+"-"+n+"-"+o+" "+r+":"+s}}))}))</script>
+</html>
